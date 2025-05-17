@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Form for Pyotr Ilyich Tchaikovsky">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Form</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page2.html">Life and Works</a></li>
+            <li><a href="page3.html">Interactive Tables</a></li>
+            <li><a href="#" aria-current="page">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Get in Touch</h2>
+        <p>Please fill out the form below to contact us regarding Pyotr Ilyich Tchaikovsky.</p>
+        <form action="process.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="interest">Area of Interest:</label>
+                <select id="interest" name="interest">
+                    <option value="ballet">Ballet</option>
+                    <option value="symphonies">Symphonies</option>
+                    <option value="operas">Operas</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <fieldset>
+                    <legend>Preferred Method of Contact:</legend>
+                    <input type="radio" id="email_contact" name="contact_method" value="email" required>
+                    <label for="email_contact">Email</label>
+                    <input type="radio" id="phone_contact" name="contact_method" value="phone">
+                    <label for="phone_contact">Phone</label>
+                </fieldset>
+            </div>
+            
+            <div class="form-group">
+                <fieldset>
+                    <legend>Topics of Interest:</legend>
+                    <input type="checkbox" id="checkbox1" name="topics[]" value="tchaikovsky_life">
+                    <label for="checkbox1">Tchaikovsky's Life</label>
+                    <input type="checkbox" id="checkbox2" name="topics[]" value="notable_works">
+                    <label for="checkbox2">Notable Works</label>
+                    <input type="checkbox" id="checkbox3" name="topics[]" value="legacy">
+                    <label for="checkbox3">Legacy</label>
+                </fieldset>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Your City:</label>
+                <input list="cities" id="location" name="location">
+                <datalist id="cities">
+                    <option value="Moscow">
+                    <option value="Saint Petersburg">
+                    <option value="New York">
+                    <option value="Paris">
+                </datalist>
+            </div>
+            
+            <div class="form-group full-width">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ekaterina Abramova. All rights reserved.</p>
+    </footer>
+</body>
+</html>
